@@ -3,3 +3,4 @@ venv/
 results/
 models/
 logs/
+sample_data/
