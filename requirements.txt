@@ -1,0 +1,15 @@
+accelerate
+beautifulsoup4
+datasets
+diffusers
+faiss-gpu
+huggingface-hub
+langchain
+matlplotlib
+openai
+optimum
+python-dotenv
+sentence-transformers
+transformers
+torch
+tqdm
