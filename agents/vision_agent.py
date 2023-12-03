@@ -13,7 +13,7 @@ class VisionAgent:
     """
     A vision agent that uses OpenAI's API to generate a response to an image.
     """
-    def __init__(self, mode : str = "normal", model : str = "gpt-4-vision-preview"):
+    def __init__(self, model : str = "gpt-4-vision-preview", mode='normal'):
         self.mode = mode
         self.model = model
         self.api_key = os.getenv("OPENAI_API_KEY")
@@ -71,7 +71,7 @@ class VisionAgent:
         Returns:
             _type_: _description_
         """
-        with open(f'prompts/{self.mode}_prompt.txt', 'r') as file:
+        with open(f'../prompts/{self.mode}_prompt.txt', 'r') as file:
             prompt = file.read()
         
         return prompt
