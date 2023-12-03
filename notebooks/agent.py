@@ -3,7 +3,7 @@ import warnings
 warnings.filterwarnings("ignore") # I'm sure this will be fine...
 
 from transformers import TextDataset, DataCollatorForLanguageModeling
-from transformers import AutoTokenizer, AutoModelWithLMHead
+from transformers import AutoTokenizer, AutoModelForCausalLM
 from transformers import Trainer, TrainingArguments
 from transformers import DataCollatorForLanguageModeling
 
@@ -13,10 +13,11 @@ from datasets import Dataset
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import FAISS
+from huggingface_hub import InferenceClient
 
 
 class Agent():
-    def __init__(self, model_config : SimpleNamespace, database_config : SimpleNamespace = None):
+    def __init__(self, model_config : SimpleNamespace, database_config : SimpleNamespace = None, local : bool = True):
         """RAG agent
 
         Args:
@@ -24,14 +25,17 @@ class Agent():
             database_config (SimpleNamespace, optional): database parameters. Defaults to None.
         """
         self.model_config = model_config
-        self._validate_model_config()
         self.database_config = database_config
+        self.local = local
 
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
         print(f"Initalizing model: {self.model_config.model_name}")
-        self.tokenizer = AutoTokenizer.from_pretrained(self.model_config.model_name)
-        self.model = AutoModelWithLMHead.from_pretrained(self.model_config.model_name).to(self.device)
+        if local:
+            self.tokenizer = AutoTokenizer.from_pretrained(self.model_config.model_name)
+            self.model = AutoModelForCausalLM.from_pretrained(self.model_config.model_name).to(self.device)
+        else:
+            self.model = InferenceClient(model=model_config.model_name)
 
         if self.database_config is not None:
             print(f"Creating database from: {self.database_config.text_path}")
@@ -43,31 +47,9 @@ class Agent():
     def __repr__(self):
         agent_config = f"self.model_config: {self.model_config}\nself.database_config: {self.database_config}"
         return agent_config
-
-
-    def _validate_model_config(self):
-        assert hasattr(self.model_config, 'model_name'), "model_config must have a model_name attribute"
-        if not hasattr(self.model_config, 'gen_length'):
-            self.model_config.gen_length = 128
-        if not hasattr(self.model_config, 'context_length'):
-            self.model_config.context_length = 256
-        if not hasattr(self.model_config, 'temperature'):
-            self.model_config.temperature = 0.7
-        if not hasattr(self.model_config, 'do_sample'):
-            self.model_config.do_sample = True
-
-    
-    def _validate_database_config(self):
-        assert hasattr(self.database_config, 'text_path'), "database_config must have a text_path attribute"
-        assert hasattr(self.database_config, 'text_splitter'), "database_config must have a text_splitter attribute"
-        assert hasattr(self.database_config, 'chunk_size'), "database_config must have a chunk_size attribute"
-        assert hasattr(self.database_config, 'chunk_overlap'), "database_config must have a chunk_overlap attribute"
-        assert hasattr(self.database_config, 'embedding_model'), "database_config must have an embedding_model attribute"
-        assert hasattr(self.database_config, 'vector_store'), "database_config must have a vector_store attribute"
             
     
     def _create_database(self):
-        self._validate_database_config()
         
         with open(self.database_config.text_path, 'r') as f:
             text = f.read()
@@ -87,6 +69,32 @@ class Agent():
         return db
 
 
+    def _generate_local(self, prompt):
+        input_ids = self.tokenizer.encode(prompt, return_tensors='pt').to(self.device)
+
+        output = self.model.generate(input_ids,
+                        max_length=self.model_config.gen_length + len(input_ids[0]),
+                        temperature=self.model_config.temperature,
+                        do_sample=self.model_config.do_sample,
+                        repetition_penalty=self.model_config.repetition_penalty,
+                        # pad_token_id=self.tokenizer.pad_token_id   
+                    )
+
+        # output without input_ids
+        return self.tokenizer.decode(output[0][len(input_ids[0]):], skip_special_tokens=True)[1:]
+
+
+    def _generate_remote(self, prompt):
+        output = self.model.text_generation(
+            prompt,
+            max_new_tokens=self.model_config.gen_length,
+            temperature=self.model_config.temperature,
+            do_sample=self.model_config.do_sample,
+            repetition_penalty=self.model_config.repetition_penalty,
+        )
+        return output[1:]
+
+
     def ask_question(self, query : str = "What is your name?", retrieval : bool = True) -> str:
         """Ask a question
 
@@ -104,20 +112,14 @@ class Agent():
         else:
             prompt = question + " RESPONSE:"
 
-        input_ids = self.tokenizer.encode(prompt, return_tensors='pt').to(self.device)
+        if self.local:
+            output = self._generate_local(prompt)
+        else:
+            output = self._generate_remote(prompt)
 
-        output = self.model.generate(input_ids,
-                        max_length=self.model_config.gen_length + len(input_ids[0]),
-                        # temperature=0.7,
-                        num_beams=5,
-                        no_repeat_ngram_size=2,
-                        early_stopping=True,
-                        # do_sample=True,
-                        pad_token_id=self.tokenizer.pad_token_id   
-                    )
-
+        
         # output without input_ids
-        return self.tokenizer.decode(output[0][len(input_ids[0]):], skip_special_tokens=True)[1:]
+        return output
 
 
     def train(self, training_config : SimpleNamespace) -> None:
@@ -129,6 +131,8 @@ class Agent():
         Returns:
             None
         """
+        if not self.local:
+            raise NotImplementedError("Training is not supported for remote models")
         if not self.trained:
             self.tokenizer.add_special_tokens({'pad_token': '<pad>'})
             with torch.no_grad():
