@@ -4,3 +4,5 @@ results/
 models/
 logs/
 sample_data/
+
+.DS_Store
