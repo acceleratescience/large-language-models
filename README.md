@@ -21,4 +21,4 @@ or you can create a separate file called `.env` and store your API key in this w
 ```
 OPENAI_API_KEY = 'sk-1234567890'
 ```
-and when you call `OpenAI()`, you key will be automatically read using `os.environ.get("OPENAI_API_KEY")``
+and when you call `OpenAI()`, you key will be automatically read using `os.environ.get("OPENAI_API_KEY")`
