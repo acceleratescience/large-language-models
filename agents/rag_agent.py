@@ -16,7 +16,7 @@ from langchain.vectorstores import FAISS
 from huggingface_hub import InferenceClient
 
 
-class Agent():
+class RAGAgent():
     def __init__(self, model_config : SimpleNamespace, database_config : SimpleNamespace = None, local : bool = True):
         """RAG agent
 
