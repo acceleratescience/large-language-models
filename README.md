@@ -1,16 +1,9 @@
 ## Instructions for running on colab
 
-Two methods:
-1. Download
-2. Pip
-
-## 1. Download
+## Colab
 Download the code from GitHub. Unzip the file and upload it to your Google Drive. In the beginning of the notebooks, there is an optional cell to run which will mount your drive and put you in the correct directory.
 
-## 2. Pip
-Just run `!pip install something.something@something`
-
-## General instructions
+## Local
 Alternatively, if you're running locally, then just run
 ```python
 pip install -r requirements.txt
@@ -28,4 +21,4 @@ or you can create a separate file called `.env` and store your API key in this w
 ```
 OPENAI_API_KEY = 'sk-1234567890'
 ```
-and when you call `OpenAI()`, you key will be automatically read using `os.environ.get("OPENAI_API_KEY")``
+and when you call `OpenAI()`, you key will be automatically read using `os.environ.get("OPENAI_API_KEY")`
