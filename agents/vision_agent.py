@@ -16,7 +16,7 @@ class VisionAgent:
         self.model = model
         
 
-    def get_response(self, prompt : str, image_path : str) -> dict:
+    def get_response(self, prompt : str, image_path : str, output_size : int = 256) -> dict:
         """_summary_
 
         Args:
@@ -45,7 +45,7 @@ class VisionAgent:
                 ],
             }
             ],
-            max_tokens=256,
+            max_tokens=output_size,
         )
         return response.choices[0].message.content
 

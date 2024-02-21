@@ -5,7 +5,7 @@ description = "A package containing llm agents"
 authors = ["rkdan <rkd43@cam.ac.uk>"]
 license = "mit"
 readme = "README.md"
-packages = [{include = "agents", "embedder"}]
+packages = [{include = "embedder"}, {include = "agents"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
