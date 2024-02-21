@@ -10,7 +10,7 @@ Contained within is the material to accompany the Large Language Model Workshop.
 2. [Introduction to APIs](#intro-to-APIs)
     - [Setting up API keys](#api-keys)
 3. [Training and Augmenting GPT-2](#finetuning-gpt2)
-4. [Finetuning Llama with LoRA](#llama-lora)
+4. [Finetuning for classification](#bert)
 5. [No-code](#no-code)
 6. [Stable Diffusion](#stable-diffusion)
 
@@ -45,8 +45,8 @@ A walkthrough of using and finetuning a Hugging Face model (GPT-2) can be found 
 
 This notebook also contains code detailing the construction of a very simple RAG system.
 
-## 4. Finetuning Llama with LoRA <a id="llama-lora"></a>
-The notebook `llama-lora.ipynb` contains an example of how to finetune llama using LoRA and QLoRA.
+## 4. Finetuning for classification <a id="bert"></a>
+The notebook `BERT_classification.ipynb` contains some code for finetuning smaller models for classification or regression tasks using a simple dataset. It can be modified relatively easily to include your own data.
 
 ## 5. No-code <a id="no-code"></a>
 In the workshop, we covered some no-code options:

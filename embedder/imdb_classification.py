@@ -5,6 +5,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from torch import nn
 from torch.utils.data import DataLoader, Dataset
+from tqdm import tqdm
 from transformers import AutoModel, AutoTokenizer
 
 from datasets import load_dataset
@@ -60,7 +61,7 @@ def get_train_test_loaders(texts, labels, test_texts, test_labels, tokenizer, ma
 def train_epoch(model, train_loader, criterion, optimizer, device):
     model.train()
     train_loss = 0
-    for batch in train_loader:
+    for batch in tqdm(train_loader):
         input_ids = batch['input_ids'].to(device)
         attention_mask = batch['attention_mask'].to(device)
         labels = batch['label'].to(device)
@@ -73,9 +74,8 @@ def train_epoch(model, train_loader, criterion, optimizer, device):
 
         train_loss += loss.item()
     train_loss /= len(train_loader)
-    accuracy = accuracy_score(all_labels, all_preds)
 
-    return train_loss, accuracy
+    return train_loss
 
 
 def eval_model(model, val_loader, criterion, device):
@@ -104,9 +104,9 @@ def eval_model(model, val_loader, criterion, device):
 
 def train_model(model, train_loader, val_loader, criterion, optimizer, device, n_epochs):
     for epoch in range(n_epochs):
-        train_loss, train_accuracy = train_epoch(model, train_loader, criterion, optimizer, device)
+        train_loss = train_epoch(model, train_loader, criterion, optimizer, device)
         val_loss, val_accuracy = eval_model(model, val_loader, criterion, device)
-        print(f'Epoch {epoch + 1}/{n_epochs}, Train Loss: {train_loss:.4f}, Train Accuracy: {train_accuracy:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}')
+        print(f'Epoch {epoch + 1}/{n_epochs}, Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}')
 
 
 def main(params):
