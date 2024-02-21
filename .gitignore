@@ -173,5 +173,6 @@ results/
 models/
 logs/
 datasets/alpaca/
+Slides/
 
 .DS_Store
