@@ -2,10 +2,10 @@ accelerate
 beautifulsoup4
 datasets
 diffusers
-faiss-gpu
+faiss-cpu
 huggingface-hub
 langchain
-matlplotlib
+matplotlib
 openai
 optimum
 python-dotenv
