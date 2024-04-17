@@ -1,11 +1,5 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 
-<!-- Add style content -->
-<style>
-    ol { counter-reset: item }
-    li{ display: block }
-    li:before { content: counters(item, ".") " "; counter-increment: item }
-</style>
 <!-- PROJECT SHIELDS -->
 <!-- [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
