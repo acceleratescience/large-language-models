@@ -13,3 +13,6 @@ sentence-transformers
 transformers
 torch
 tqdm
+peft
+bitsandbytes
+accelerate
