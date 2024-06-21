@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM python:latest
 LABEL container="large-language-models"
 LABEL maintainer="Ryan Daniels"
 LABEL version="0.1.0"
