@@ -29,17 +29,20 @@
 
   <h3 align="center">Large Language Models for Scientific Research</h3>
 
-  <p align="center">
+  <p align="justify">
     An introduction to large language models for scientific research - how do they work, how can they be used, and how can they be trained?
+  </p>
+  <p align="center">
+    <!-- <a href="https://acceleratescience.github.io/diffusion-models/" style="font-size: 20px; text-decoration: none"><strong>Start »</strong></a>
     <br />
-    <!-- <a href="https://acceleratescience.github.io/packaging-publishing/"><strong>Start the Course »</strong></a>
+    <br /> -->
+    <a href="https://github.com/acceleratescience/large-language-models/tree/main/large-language-models/notebooks">Check out the notebooks</a>
+    ·
+    <a href="https://github.com/acceleratescience/large-language-models/tree/main/large-language-models/Slides">Check out the Slides</a>
     <br />
-    <br />
-    <a href="https://github.com/acceleratescience/packaging-publishing/tree/basic">Get Basic Code</a>
-    · -->
     <a href="https://github.com/acceleratescience/large-language-models/issues">Report Bug</a>
     ·
-    <a href="https://github.com/acceleratescience/large-language-models/issues">Request Content</a>
+    <a href="https://github.com/acceleratescience/large-language-models/issues">Request Feature</a>
   </p>
 </div>
 
