@@ -1,3 +1,6 @@
+/venv
+docs/.DS_Store
+.env
 .vs/
 .vscode/
 .idea/
@@ -174,3 +177,6 @@ logs/
 datasets/alpaca/
 
 .DS_Store
+
+mkdocs.yml
+docs/
