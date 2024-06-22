@@ -136,6 +136,7 @@ and then
 
 ```bash
 docker run -it acceleratescience/large-language-models:latest /bin/bash
+```
 
 Alternatively, if you're running locally, then just run
 ```python
