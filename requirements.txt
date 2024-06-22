@@ -16,3 +16,4 @@ tqdm
 peft
 bitsandbytes
 accelerate
+ipykernel
