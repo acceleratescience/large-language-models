@@ -126,6 +126,17 @@ Slides for the course can be found in the `Slides` directory. The notebooks that
 Download the code from GitHub. Unzip the file and upload it to your Google Drive. In the beginning of the notebooks, there is an optional cell to run which will mount your drive and put you in the correct directory.
 
 ### Local <a id="local"></a>
+#### Docker
+
+We recommend using docker to run the code locally. To build the docker image, run the following command in the root directory of the project:
+```bash
+docker pull acceleratescience/large-language-models:latest
+```
+and then
+
+```bash
+docker run -it acceleratescience/large-language-models:latest /bin/bash
+
 Alternatively, if you're running locally, then just run
 ```python
 pip install -r requirements.txt
