@@ -15,5 +15,3 @@ torch
 tqdm
 peft
 bitsandbytes
-accelerate
-ipykernel

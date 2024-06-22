@@ -11,4 +11,5 @@ COPY . /workspace
 # Install dependencies
 RUN apt-get update && \
     apt-get upgrade -y && \
+    python -m pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
