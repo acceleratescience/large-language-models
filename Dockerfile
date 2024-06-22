@@ -10,5 +10,5 @@ COPY . /workspace
 # Install dependencies
 RUN apt-get update && \
     apt-get upgrade -y && \
-    python -m pip install --upgrade pip && \
+    apt-get install -y git python3 python3-pip && \
     pip install --no-cache-dir -r requirements.txt
