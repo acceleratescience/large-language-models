@@ -35,7 +35,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Set platforms
         run: |
-          echo "PLATFORMS=linux/amd64,linux/arm/v8" >> $GITHUB_ENV
+          echo "PLATFORMS=linux/amd64,linux/arm/v7" >> $GITHUB_ENV
       -
         name: Build and push
         uses: docker/build-push-action@v5
