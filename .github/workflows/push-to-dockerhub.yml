@@ -18,7 +18,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            acceleratescience/lm-conceptual-engineering
+            acceleratescience/large-language-models
           tags: |
             type=semver,pattern={{version}}
             latest
