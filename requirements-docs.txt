@@ -1,0 +1,2 @@
+mkdocstrings==0.25.1
+mkdocs-material==9.5.21

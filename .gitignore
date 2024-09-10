@@ -181,3 +181,4 @@ datasets/alpaca/
 mkdocs.yml
 docs/
 ignore/
+.env
