@@ -43,6 +43,9 @@
     <a href="https://github.com/acceleratescience/large-language-models/issues">Report Bug</a>
     ·
     <a href="https://github.com/acceleratescience/large-language-models/issues">Request Feature</a>
+    <br />
+    <br />
+    <a href="https://acceleratescience.github.io/packaging-publishing/"><strong>Head to the hands on course »</strong></a>
   </p>
 </div>
 
@@ -51,6 +54,7 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
+    <li><a href="#overview">Overview</a></li>
     <li><a href="#prerequisites">Prerequisites</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -85,7 +89,23 @@
 [Badge License]: https://img.shields.io/badge/-BY_SA_4.0-ae6c18.svg?style=for-the-badge&labelColor=EF9421&logoColor=white&logo=CreativeCommons
 [Badge Likes]: https://img.shields.io/github/stars/MarkedDown/Buttons?style=for-the-badge&labelColor=d0ab23&color=b0901e&logoColor=white&logo=Trustpilot
 
+# Overview
+This repository is split into two main parts:
+1. An introduction to large language models for scientific research - how do they work, how can they be used, and how can they be trained?
+2. A hands-on tutorial on how to use large language models for scientific research.
 
+### Introduction to LLMs
+Part 1 consists of some slides and some notebooks that introduce LLMs, and how they can be used for scientific research. We look at finetuning a BERT model for classication tasks, finetuning GPT-2 to make it sound like the President of the United States, and using RAG to produce a simple question-answering system with Streamlit
+
+### Hands-on LLM workshop
+Part 2 is a much more comprehensive hands-on tutorial. It is designed as a reference source for our hands-on LLM workshop, but may be useful for others to get started with LLMs. To get started, follow the link and head to the website.
+
+<div align="center">
+  <p align="center">
+    <a href="https://acceleratescience.github.io/large-language-models/"><strong>Hands on course coming soon »</strong></a>
+
+  </p>
+</div>
 
 <!-- GETTING STARTED -->
 ## Prerequisites
