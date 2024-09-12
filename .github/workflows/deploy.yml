@@ -11,7 +11,7 @@ env:
   PYTHON_VERSION: '3.x'
   MKDOCS_SITE_DIR: 'site'
   DOCS_BRANCH: 'gh-pages'
-  DOCS_SUBDIR: 'packaging-publishing'
+  DOCS_SUBDIR: 'large-language-models'
 
 jobs:
   deploy:
