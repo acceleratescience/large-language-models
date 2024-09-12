@@ -10,7 +10,6 @@ This page is pretty simple, start with [Setting up](1_setting_up.md) and then co
 
 Or you can just pick a section that interests you.
 
-# Sections
 <!-- 
 <div class="grid cards" markdown>
 
