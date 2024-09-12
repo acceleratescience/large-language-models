@@ -1,6 +1,7 @@
 site_name: Hands on LLM Workshop
 repo_url: https://github.com/acceleratescience/large-language-models
 site_url: https://docs.science.ai.cam.ac.uk/large-language-models/
+use_directory_urls: false
 nav:
   - Home: 
     - Welcome!: index.md
