@@ -179,5 +179,6 @@ datasets/alpaca/
 .DS_Store
 
 mkdocs.yml
-docs/
+# docs/
 ignore/
+.env
