@@ -1,0 +1,151 @@
+site_name: Hands on LLM Workshop
+repo_url: https://docs.science.ai.cam.ac.uk/large-language-models/
+site_url: https://acceleratescience.github.io/large-language-models/
+nav:
+  - Home: 
+    - Welcome!: index.md
+    - The Workshop: Home/workshop.md
+    - License: Home/LICENSE.md
+    - About us: Home/about.md
+  - Setting up: 1_setting_up.md
+  - The OpenAI API: 2_open_ai.ipynb
+  - Prompting:
+    - Prompt Engineering: prompting/3_prompting.ipynb
+    - Prompt Templates: prompting/4_prompt_templates.ipynb
+  - Pydantic: 5_pydantic.ipynb
+  # - Project overview: 2_project_overview.md
+  # - Poetry: 3_poetry.md
+  # - Testing: 4_Testing.md
+  # - Publishing:
+  #   - Publishing to PyPI: publishing_docs/publishing.md
+  #   - Making Documentation: publishing_docs/documentation.md
+  # - CI/CD:
+  #   - CICD/index.md
+  #   - Pre-commits: CICD/precommit.md
+  #   - Testing: CICD/testing.md
+  #   - Publishing: CICD/publishing.md
+  #   - Documentation: CICD/documentation.md
+  # - Resources:
+  #   - resources/index.md
+  #   - Slides: resources/slides.md
+  #   - Further reading: resources/references.md
+extra_css:
+  - css/custom.css
+theme:
+  favicon: imgs/trace.svg
+  name: material
+  custom_dir: overrides
+  logo: imgs/trace.svg
+  features:
+    - search.suggest
+    - search.highlight
+    - announce.dismiss
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.footnote.tooltips
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    annotation: material/chevron-right-circle 
+plugins:
+  - mkdocstrings
+  - search
+  - mkdocs-jupyter
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - tables
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+extra:
+  homepage: https://docs.science.ai.cam.ac.uk/
+  consent:
+      title: Cookie consent
+      description: >- 
+        We use cookies to recognize your repeated visits and preferences, as well
+        as to measure the effectiveness of our documentation and whether users
+        find what they're searching for. With your consent, you're helping us to
+        make our documentation better.
+      actions:
+        - accept
+        - reject
+        - manage
+  analytics:
+    provider: google
+    property: G-JLGLYJ24SD
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="https://github.com/acceleratescience/large-language-models/issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">feedback form</a>.
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="https://github.com/acceleratescience/large-language-models/issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">feedback form</a>.
+copyright: >
+  Copyright &copy; 2024 Accelerate Programme for Scientific Discovery –
+  <a href="#__consent">Change cookie settings</a>
+watch:
+  - .
