@@ -33,6 +33,18 @@ jobs:
       - name: Build the MkDocs site
         run: mkdocs build
 
+      - name: Check if gh-pages branch exists
+        id: check_branch
+        run: |
+          if git ls-remote --heads origin gh-pages | grep -q 'refs/heads/gh-pages'; then
+            echo "Branch exists"
+            echo "branch_exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "Branch does not exist"
+            echo "branch_exists=false" >> $GITHUB_OUTPUT
+          fi
+      
+
       - name: Generate GitHub App token
         id: generate_token
         uses: tibdex/github-app-token@v1
