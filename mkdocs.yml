@@ -92,7 +92,6 @@ plugins:
   - mkdocstrings
   - search
   - mkdocs-jupyter
-      use_directory_urls: false
 markdown_extensions:
   - abbr
   - admonition
