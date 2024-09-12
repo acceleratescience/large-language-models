@@ -28,7 +28,7 @@ jobs:
 
       - name: Install MkDocs and dependencies
         run: |
-          pip install mkdocs mkdocs-material mkdocstrings
+          pip install mkdocs mkdocs-material mkdocstrings mkdocs-jupyter
 
       - name: Build the MkDocs site
         run: mkdocs build
