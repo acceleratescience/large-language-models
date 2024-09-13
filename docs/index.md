@@ -6,11 +6,12 @@
 
 Welcome to the material for the LLM Hands on Workshop!
 
-This page is pretty simple, start with [Setting up](1_setting_up.md) and then continue through the sections in order. We start with some basic API calls, then introduce Pydantic, LlamaIndex, and RAG.
+This page is pretty simple, start with [Setting up](1_setting_up.md) and then continue through the sections in order. We start with some basic API calls, then introduce more features until we have a fully working chat application.
 
-Or you can just pick a section that interests you.
+The main outcome of this workshop is to have you conversing with an LLM about your own research or data.
 
-# Sections
+You can work through the workshop in order... or you can just pick a section that interests you.
+
 <!-- 
 <div class="grid cards" markdown>
 

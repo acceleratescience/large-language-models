@@ -13,6 +13,7 @@ nav:
     - Prompt Engineering: prompting/3_prompting.ipynb
     - Prompt Templates: prompting/4_prompt_templates.ipynb
   - Pydantic: 5_pydantic.ipynb
+  - States: 6_states.ipynb
   # - Project overview: 2_project_overview.md
   # - Poetry: 3_poetry.md
   # - Testing: 4_Testing.md
@@ -37,6 +38,7 @@ theme:
   custom_dir: overrides
   logo: imgs/trace.svg
   features:
+    - toc.integrate
     - search.suggest
     - search.highlight
     - announce.dismiss
@@ -56,7 +58,7 @@ theme:
     # - navigation.prune
     - navigation.sections
     - navigation.tabs
-    # - navigation.tabs.sticky
+    - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
     - search.highlight
