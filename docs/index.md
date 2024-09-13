@@ -10,7 +10,7 @@ This page is pretty simple, start with [Setting up](1_setting_up.md) and then co
 
 The main outcome of this workshop is to have you conversing with an LLM about your own research or data.
 
-Or you can just pick a section that interests you.
+You can work through the workshop in order... or you can just pick a section that interests you.
 
 <!-- 
 <div class="grid cards" markdown>
