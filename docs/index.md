@@ -1,10 +1,10 @@
 <a href="https://acceleratescience.github.io/">
-    <img src="../imgs/full_acc.png" alt="Logo" width=500>
+    <img src="./imgs/full_acc.png" alt="Logo" width=500>
   </a>
 
 # LLM Hands on Workshop
 
-![image](../imgs/scientist.webp)
+![image](./imgs/scientist.webp)
 
 Welcome to the material for the LLM Hands on Workshop!
 

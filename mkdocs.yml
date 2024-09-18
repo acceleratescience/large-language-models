@@ -3,10 +3,10 @@ repo_url: https://github.com/acceleratescience/large-language-models
 site_url: https://docs.science.ai.cam.ac.uk/large-language-models/
 nav:
   - Home:
-    - Welcome!: home/index.md
+    - Welcome!: index.md
     # - The Workshop: Home/workshop.md
-    - License: home/LICENSE.md
-    - About us: home/about.md
+    - License: Home/LICENSE.md
+    - About us: Home/about.md
   - Setting up: 1_setting_up.md
   - The OpenAI API: 2_open_ai.ipynb
   - Prompting:
