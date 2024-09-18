@@ -19,6 +19,12 @@ My advice would be to create a new repository on Github, and then create a codes
 pip install -r requirements-handson.txt
 ```
 
+You should also create a new file called `.env` and add your OpenAI API key to it.
+
+```bash
+OPENAI_API_KEY=<YOUR_API_KEY>
+```
+
 ## Setting up RunPod and vLLM
 For this demonstration we will run `llama-3.1-8b` on a Nvidia A40 GPU. If you want to do this, you will need to set up a RunPod account, add a payment method, and deposit some credit. For RunPod, you pay by the hour.
 
