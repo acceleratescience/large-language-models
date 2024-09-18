@@ -13,7 +13,9 @@ nav:
     - Prompt Engineering: prompting/3_prompting.ipynb
     - Prompt Templates: prompting/4_prompt_templates.ipynb
   - Pydantic: 5_pydantic.ipynb
-  - States: 6_states.ipynb
+  - States: 
+    - Tracking Basic Information: states/6_states.ipynb
+    - Running Summary: states/7_summary.ipynb
   # - Project overview: 2_project_overview.md
   # - Poetry: 3_poetry.md
   # - Testing: 4_Testing.md
