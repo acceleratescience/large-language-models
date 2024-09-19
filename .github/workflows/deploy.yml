@@ -57,7 +57,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git clone --branch ${{ env.DOCS_BRANCH }} https://x-access-token:${{ steps.generate_token.outputs.token }}@github.com/acceleratescience/workshops.git temp_docs
+          git clone --branch ${{ env.DOCS_BRANCH }} https://x-access-token:${{ steps.generate_token.outputs.token }}@github.com/acceleratescience/resource-hub.git temp_docs
 
       - name: Deploy to Documentation Repo
         run: |
@@ -72,7 +72,7 @@ jobs:
           git add .
           git diff-index --quiet HEAD || (git stash && git pull --rebase origin ${{ env.DOCS_BRANCH }} && git stash pop)
           git add .
-          git diff-index --quiet HEAD || git commit -m "Update ${{ env.DOCS_SUBDIR }} workshops"
+          git diff-index --quiet HEAD || git commit -m "Update ${{ env.DOCS_SUBDIR }} resource-hub"
           git push origin ${{ env.DOCS_BRANCH }}
 
       - name: Clean up
