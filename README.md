@@ -45,7 +45,7 @@
     <a href="https://github.com/acceleratescience/large-language-models/issues">Request Feature</a>
     <br />
     <br />
-    <a href="https://acceleratescience.github.io/packaging-publishing/"><strong>Head to the hands on course »</strong></a>
+    <a href="https://acceleratescience.github.io/packaging-publishing/"><strong>Head to the hands-on course »</strong></a>
   </p>
 </div>
 
