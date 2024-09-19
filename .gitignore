@@ -176,3 +176,4 @@ docs/docs_skeleton/yarn.lock
 # docs/
 ignore/
 .env
+chroma.sqlite3
