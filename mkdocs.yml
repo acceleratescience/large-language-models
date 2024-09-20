@@ -16,7 +16,9 @@ nav:
   - States: 
     - Tracking Basic Information: states/6_states.ipynb
     - Running Summary: states/7_summary.ipynb
-  - Data storage: 8_llamaindex.ipynb
+  - Data Storage and Ingestion:
+    - Data storage: data-storage-and-ingestion/8_data_storage.ipynb
+    - Ingestion: data-storage-and-ingestion/9_ingestion.ipynb
   # - Project overview: 2_project_overview.md
   # - Poetry: 3_poetry.md
   # - Testing: 4_Testing.md
