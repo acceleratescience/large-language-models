@@ -18,7 +18,7 @@ nav:
     - Running Summary: states/7_summary.ipynb
   - Data Storage and Ingestion:
     - Data storage: data-storage-and-ingestion/8_data_storage.ipynb
-    - Ingestion: data-storage-and-ingestion/9_ingestion.ipynb
+    - Ingestion: data-storage-and-ingestion/9_documents.ipynb
   # - Project overview: 2_project_overview.md
   # - Poetry: 3_poetry.md
   # - Testing: 4_Testing.md

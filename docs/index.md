@@ -6,17 +6,46 @@
 
 ![image](./imgs/scientist.webp)
 
-Welcome to the material for the LLM Hands on Workshop!
+### Welcome to the material for the LLM Hands on Workshop!
 
 
-There is a wealth of material online about how to use and work with LLMs. So much so in face that it can hard to know where to start, and what path to take to get from beginner to proficient.
+There is a wealth of material online about how to use and work with LLMs. So much so that it can hard to know where to start, and what path to take to get from beginner to proficient. Therefore, we have created this workshop by combining the best bits of many different resources, and focusing on practical skills that you can use to work with LLMs.
 
-Therefore, we have created this workshop by combining the best bits of many different resources, and focusing on practical skills that you can use to work with LLMs.
+## A focus on retrieval augmented generation
+
+This workshop places the focus on retrieval augmented generation (RAG). The general RAG process looks something like the below:
+
+```mermaid
+flowchart RL
+    database[(Database)]
+    document>Document]
+    index{index}
+    human((Human))
+    llm((LLM))
+    combined[Prompt template
+    + query 
+    + context]
+    database --> index
+    document --> index
+    human -- "Query" --> index
+    index --> combined
+    combined --> llm
+    llm -- "Response" --> human
+```
+
+We are used to interacting with user interfaces like ChatGPT, and not always aware of the infrastructure underneath. In short, RAG involves taking some data from a document or database and creating an index - a database that allows us to quickly search over chunks of our documents. When a user sends input to the model interface, this database is queried and the relevant search results are returned, similar to when you Google something, you get a list of potential websites to check. These relevant chunks are then sent to a LLM, along with your original input, and the LLM generates a response.
+
+Sounds easy?
+
+Well yes - and no! While it is fairly easy to get up and running with RAG, it is actually quite hard to get it working correctly and consistently.
 
 We try to focus on a framework agnostic approach, so that you can use models from any provider, or run local models if you like. Instead of relying on popular but complex frameworks like LangChain or LlamaIndex, we've chosen to focus on fundamental tools:
 
-- Direct API interactions
+- Direct API interactions using OpenAI
+- Data validation using Pydantic
 - Jinja templates for prompt engineering
+- ChromaDB for indexing
+- Streamlit for user interfaces
 
 By building from the ground up, this workshop aims to provide researchers and practitioners with:
 
