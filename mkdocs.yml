@@ -16,9 +16,10 @@ nav:
   - States: 
     - Tracking Basic Information: states/6_states.ipynb
     - Running Summary: states/7_summary.ipynb
-  - Data Storage and Ingestion:
+  - Data Storage and Documents:
     - Data storage: data-storage-and-ingestion/8_data_storage.ipynb
     - Ingestion: data-storage-and-ingestion/9_documents.ipynb
+  # - Practical - Open Source Articles: p1_doc-validation.ipynb
   # - Project overview: 2_project_overview.md
   # - Poetry: 3_poetry.md
   # - Testing: 4_Testing.md
