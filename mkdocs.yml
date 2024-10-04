@@ -7,11 +7,17 @@ nav:
     # - The Workshop: Home/workshop.md
     - License: Home/LICENSE.md
     - About us: Home/about.md
-  - Setting up: 1_setting_up.md
+  - Setting up:
+    - Overview: setting-up/overview.md
+    - Codespaces: setting-up/codespaces.md
+    - Runpod: setting-up/runpod.md
+    - Nvidia NIMs: setting-up/nvidia.md
+    - Azure AI Studio: setting-up/azure.md
   - The OpenAI API: 2_open_ai.ipynb
   - Prompting:
     - Prompt Engineering: prompting/3_prompting.ipynb
     - Prompt Templates: prompting/4_prompt_templates.ipynb
+    - Generating abstracts: prompting/prompting_exercise.ipynb
   - Pydantic: 5_pydantic.ipynb
   - States: 
     - Tracking Basic Information: states/6_states.ipynb
