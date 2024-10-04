@@ -6,3 +6,4 @@ rich
 pydantic
 chromadb
 pysqlite3-binary
+streamlit
