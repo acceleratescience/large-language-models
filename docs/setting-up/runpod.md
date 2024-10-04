@@ -1,34 +1,8 @@
-# Setting up
+# Runpod
 
-For this workshop, we will be using models from OpenAI. We understand that often in research, we want full control and ownership over our models. The models hosted by OpenAI are closed source, and therefore may be inappropriate for some use cases. However, there are some advantages to using OpenAI models:
-
-1. OpenAI arguably offer the best current models
-2. They are reliable
-3. The documentation is excellent
-4. They use the OpenAI API spec
-
-The final point is particularly important - we will show you how to set up a cloud instance on RunPod using vLLM. vLLM is a library that essentially wraps a hugging face model in an API spec that is compatible with OpenAI. So almost all of the skills you learn using OpenAI will be transferable to running your own models.
-
-If you want to use OpenAI, you will need to create an API key. For this workshop, we will provide you with one. However, if you want to use your own open source models, then you can also do that. During the workshop, wherever possible, we will try and highlight the differences between using OpenAI and your own models.
-
-## Setting up your environment
-For this workshop, since we're not really doing any heavy lifting, we can work entirely within Github Codespaces. If you want, you can also use any other IDE you like, such as VSCode, or Jupyter Notebooks.
-
-My advice would be to create a new repository on Github, and then create a codespace from that repository. You can then copy and past the `requirements-handson.txt` file into the repository, and install the dependencies. You can also copy and paste the `Handson` folder into your repository. This folder contains the code that we will run through in the workshop.
-
-```bash
-pip install -r requirements-handson.txt
-```
-
-You should also create a new file called `.env` and add your OpenAI API key to it.
-
-```bash
-OPENAI_API_KEY=<YOUR_API_KEY>
-```
-
-## Setting up RunPod and vLLM
 For this demonstration we will run `llama-3.1-8b` on a Nvidia A40 GPU. If you want to do this, you will need to set up a RunPod account, add a payment method, and deposit some credit. For RunPod, you pay by the hour.
 
+## Setup Runpod and Hugging Face access
 **1. Create a RunPod account** Head to the [runpod website](https://www.runpod.io/) and create an account.
 
 **2. Over to `Billing` and add some credit** You can add a payment method and deposit any amount you like.
@@ -37,19 +11,19 @@ For this demonstration we will run `llama-3.1-8b` on a Nvidia A40 GPU. If you wa
 
 **4. Create a RunPod Template** Head to templates and add a new template. Fill out the details as shown below.
 
-![RunPod Template](imgs/template.png)
+![RunPod Template](../imgs/template.png)
 
 For the token you'll need to add a new Hugging Face API token. You can create one [here](https://huggingface.co/settings/tokens).
 
-![RunPod Secret](imgs/secret.png)
+![RunPod Secret](../imgs/secret.png)
 
 **5. Create a Pod** Once your template has been set, you can create a Pod. Head to `Pods` and click `+ Deploy`. Select the Nvidia A40 and the Llama 3.1 template you created earlier. The pod will take a while to to start up, but when it does you should see something like the below image
 
-![Connect Pod](imgs/connect.png)
+![Connect Pod](../imgs/connect.png)
 
 Hit `Connect` and then `Connect to HTTP Service [Port 8000]`. You will be directed to a confusing looking page that just says `{"detail":"Not Found"}`. Don't worry, this is normal. Copy the URL that is in the browser bar. This is your API endpoint.
 
-### Connect to your API endpoint
+## Connect to your API endpoint
 
 Now we can connect to our API endpoint. Fire up a Jupyter notebook, and try running the following, pasting in the URL you copied earlier.
 
@@ -68,7 +42,6 @@ client = OpenAI(
 ```
 
 This sets up the client.
-
 
 ```python
 
