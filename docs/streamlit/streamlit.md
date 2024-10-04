@@ -111,7 +111,7 @@ Now we start actually adding the streamlit parts, and it's actually really simpl
 
 The first two are the `title` and `text_input` widgets.
 
-```python title="Title and input"
+```python title="Title and input" linenums="58"
 # Streamlit app
 st.title("Fake Abstract Generator")
 
@@ -122,7 +122,7 @@ The title and a text input field will appear at the top of the page. The `text_i
 
 The next widget is a `button`. In Streamlit, whenever something is interacted with on the screen, your script is run again. This is essentially what we want - everytime someone presses the button, we want to grab the input text and generate the abstract.
 
-```python
+```python title="Button" linenums="64"
 # Generate button
 if st.button("Generate Abstract"):
     if topic:
@@ -150,7 +150,7 @@ If what you want is like a toggle switch, then there is a `checkbox`.
 
 Finally, we add a `sidebar`. These things are pretty important, and can be used to manage multipage applications, and store information about your session. They are also commonly where you can put controls like sliders and checkboxes.
 
-```python title="Extra decoration"
+```python title="Extra decoration" linenums="74"
 # Add some information about the app
 st.sidebar.header("About")
 st.sidebar.info(
