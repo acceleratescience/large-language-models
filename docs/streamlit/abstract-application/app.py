@@ -105,11 +105,11 @@ def update_costs(tokens, model):
 
 
 def update_usage_statistics():
-    st.sidebar.header("Usage Statistics")
-    st.sidebar.metric("Total Tokens Sent", f"{st.session_state.sent_tokens:,}")
-    st.sidebar.metric("Total Tokens Received", f"{st.session_state.received_tokens:,}")
-    st.sidebar.metric("Total Tokens Used", f"{st.session_state.total_tokens:,}")
-    st.sidebar.metric("Total Cost ($)", f"{st. session_state.total_cost:.6f}")
+    with st.sidebar.expander("Usage Statistics", expanded=False):
+        st.metric("Total Tokens Sent", f"{st.session_state.sent_tokens:,}")
+        st.metric("Total Tokens Received", f"{st.session_state.received_tokens:,}")
+        st.metric("Total Tokens Used", f"{st.session_state.total_tokens:,}")
+        st.metric("Total Cost ($)", f"{st.session_state.total_cost:.6f}")
 
 
 # Streamlit app

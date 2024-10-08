@@ -71,3 +71,23 @@ If you switch back to the RunPod terminal, you should see some activity showing 
 If you get any errors, the RunPod terminal is the best place to see what went wrong.
 
 You can switch out Llama 3.1 for any of the other [models supported by vLLM](https://docs.vllm.ai/en/latest/models/supported_models.html). Please note that not all of these models will have the same level of support. You might also find subtle differences. For example: the MistralAI models do not have an explicit system prompt; and some models have different context window limits that you may need to set manually in the RunPod template. If you are having trouble with a particular model, please feel free to ask for help.
+
+## MaaS or Self-service?
+That is the question. Do you use a MaaS service like Azure AI Studio, or run your own cloud instance? There are advantages and disadvantages to both.
+
+- Self-service means greater control, but costs will be higher.
+- You'll be able to run your own models freely, and hosting finetuned models will be the same cost as hosting the base model.
+- There is a learning curve, but not significantly more than getting a MaaS up and running
+
+There will be a certain point where the cost to run a MaaS will outpace that of self-serving. Let's look at an example:
+
+- The current price for 4x A40 GPUs is $1.56/hr.
+- The current prices for Meta-Llama-3.1-70B-Instruct on Azure AI Studio:
+    - Input:  $0.00268/1000 tokens
+    - Output: $0.00354/1000 tokens
+
+The question now is: at what point does it become more cost effective for me to use a RunPod instance?
+
+Assuming an even amount of input and output tokens, it means you would need approximately 250k tokens **each** for input and output to get to the $1.56 cost in one hour. That's ~360k words. As a reference, the first 3 Harry Potter books combined are about 250K words.
+
+That's ~140 tokens per second. Can the A40s even achieve that kind of throughput...?
