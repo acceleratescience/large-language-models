@@ -4,7 +4,9 @@
 
 # LLM Hands on Workshop
 
-![image](./imgs/scientist.webp)
+<img src="./imgs/scientist.webp" alt="Who doesn't love a cat picture" style="width:800px;"/>
+
+<!-- ![image](./imgs/scientist.webp) -->
 
 ### Welcome to the material for the LLM Hands on Workshop!
 
