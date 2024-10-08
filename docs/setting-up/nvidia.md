@@ -1,3 +1,0 @@
-# Nvidia NIMS
-
-Coming soon!

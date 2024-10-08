@@ -1,9 +1,2 @@
 llama-index
 openai
-langchain
-python-dotenv
-rich
-pydantic
-chromadb
-pysqlite3-binary
-streamlit
