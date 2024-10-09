@@ -1,6 +1,5 @@
 llama-index
 openai
-langchain
 python-dotenv
 rich
 pydantic
