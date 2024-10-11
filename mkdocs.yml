@@ -30,7 +30,7 @@ nav:
     - Introduction to Streamlit: streamlit/streamlit.md
   - RAG:
     - Ingestion: data-storage-and-ingestion/9_documents.ipynb
-  - Evaluation: 10_evaluation.ipynb
+  - Evaluation: evaluation/10_evaluation.ipynb
   # - Practical - Open Source Articles: p1_doc-validation.ipynb
   # - Project overview: 2_project_overview.md
   # - Poetry: 3_poetry.md
