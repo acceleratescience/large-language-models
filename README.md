@@ -33,7 +33,7 @@
     An introduction to large language models for scientific research - how do they work, how can they be used, and how can they be trained?
   </p>
   <p align="center">
-    <!-- <a href="https://acceleratescience.github.io/diffusion-models/" style="font-size: 20px; text-decoration: none"><strong>Start »</strong></a>
+    <!-- <a href="https://acceleratescience.github.io/large-language-models/" style="font-size: 20px; text-decoration: none"><strong>Start »</strong></a>
     <br />
     <br /> -->
     <a href="https://github.com/acceleratescience/large-language-models/tree/main/notebooks">Check out the notebooks</a>
@@ -90,7 +90,7 @@
 [Badge Likes]: https://img.shields.io/github/stars/MarkedDown/Buttons?style=for-the-badge&labelColor=d0ab23&color=b0901e&logoColor=white&logo=Trustpilot
 
 # Overview
-This repository is split into two main parts:
+This repository is Part I of a two-part course:
 1. An introduction to large language models for scientific research - how do they work, how can they be used, and how can they be trained?
 2. A hands-on tutorial on how to use large language models for scientific research.
 
@@ -102,7 +102,7 @@ Part 2 is a much more comprehensive hands-on tutorial. It is designed as a refer
 
 <div align="center">
   <p align="center">
-    <a href="https://acceleratescience.github.io/large-language-models/"><strong>Hands on course coming soon »</strong></a>
+    <a href="https://acceleratescience.github.io/large-language-models/"><strong>Hands on course Repository »</strong></a>
 
   </p>
 </div>
@@ -217,16 +217,16 @@ In addition to the above no-code options, there is also [ComfyUI](https://github
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/acceleratescience/packaging-publishing.svg?style=for-the-badge
-[contributors-url]: https://github.com/acceleratescience/packaging-publishing/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/acceleratescience/packaging-publishing.svg?style=for-the-badge
-[forks-url]: https://github.com/acceleratescience/packaging-publishing/network/members
-[stars-shield]: https://img.shields.io/github/stars/acceleratescience/packaging-publishing.svg?style=for-the-badge
-[stars-url]: https://github.com/acceleratescience/packaging-publishing/stargazers
-[issues-shield]: https://img.shields.io/github/issues/acceleratescience/packaging-publishing.svg?style=for-the-badge
-[issues-url]: https://github.com/acceleratescience/packaging-publishing/issues
-[license-shield]: https://img.shields.io/github/license/acceleratescience/packaging-publishing.svg?style=for-the-badge
-[license-url]: https://github.com/acceleratescience/packaging-publishing/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/acceleratescience/large-language-models.svg?style=for-the-badge
+[contributors-url]: https://github.com/acceleratescience/large-language-models/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/acceleratescience/large-language-models.svg?style=for-the-badge
+[forks-url]: https://github.com/acceleratescience/large-language-models/network/members
+[stars-shield]: https://img.shields.io/github/stars/acceleratescience/large-language-models.svg?style=for-the-badge
+[stars-url]: https://github.com/acceleratescience/large-language-models/stargazers
+[issues-shield]: https://img.shields.io/github/issues/acceleratescience/large-language-models.svg?style=for-the-badge
+[issues-url]: https://github.com/acceleratescience/large-language-models/issues
+[license-shield]: https://img.shields.io/github/license/acceleratescience/large-language-models.svg?style=for-the-badge
+[license-url]: https://github.com/acceleratescience/large-language-models/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/company/accelerate-programme-for-scientific-discovery/
 [product-screenshot]: images/screenshot.png
