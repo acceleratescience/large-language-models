@@ -64,7 +64,7 @@ By the end of this workshop, you'll have a robust, foundational understanding of
 
 ## How to use this workshop
 
-This site is pretty simple, start with [Setting up](1_setting_up.md) and then continue through the sections in order. We start with some basic API calls, then introduce more features until we have a fully working chat application.
+This site is pretty simple, start with [Setting up](https://docs.science.ai.cam.ac.uk/large-language-models/setting-up/overview/) and then continue through the sections in order. We start with some basic API calls, then introduce more features until we have a fully working chat application.
 
 The main outcome of this workshop is to have you conversing with an LLM about your own research or data.
 
