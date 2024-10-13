@@ -15,7 +15,7 @@ pip install -r requirements-handson.txt
 You will also need to run the following in the terminal in order to use `chromadb`:
 
 ```bash
-mkdir /home/codespace/.python/current/lib/python3.12/site-packages/google/colab
+mkdir mkdir -p /home/codespace/.local/lib/python3.12/site-packages/google/colab
 ```
 
 Add a new file in the root directory called `.gitignore`. Add the following to the `.gitignore` file:
