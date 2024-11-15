@@ -102,7 +102,7 @@ Part 2 is a much more comprehensive hands-on tutorial. It is designed as a refer
 
 <div align="center">
   <p align="center">
-    <a href="https://acceleratescience.github.io/large-language-models/"><strong>Hands on course Repository »</strong></a>
+    <a href="https://acceleratescience.github.io/large-language-models/"><strong>Introductory Course »</strong></a>
 
   </p>
 </div>
