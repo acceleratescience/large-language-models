@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "large-language-models"
+version = "0.1.0"
+description = "An introduction to LLMs"
+authors = ["Ryan Daniels <31715811+rkdan@users.noreply.github.com>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+packages = [{include = "large_language_models"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+transformers = "^4.46.2"
+mkdocs-pdf = "^0.1.2"
+
+[tool.poetry.group.dev.dependencies]
+mkdocs = "^1.6.1"
+mkdocs-material = "^9.5.44"
+mkdocstrings = "^0.27.0"
+mkdocs-pdf = "^0.1.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
