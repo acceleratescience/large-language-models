@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "large-language-models"
-version = "0.1.0"
+version = "0.1.1"
 description = "An introduction to LLMs"
 authors = ["Ryan Daniels <31715811+rkdan@users.noreply.github.com>"]
 license = "GPL-3.0-or-later"
