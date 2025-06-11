@@ -5,18 +5,18 @@ description = "An introduction to LLMs"
 authors = ["Ryan Daniels <31715811+rkdan@users.noreply.github.com>"]
 license = "GPL-3.0-or-later"
 readme = "README.md"
-packages = [{include = "large_language_models"}]
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
-transformers = "^4.46.2"
-mkdocs-pdf = "^0.1.2"
+
 
 [tool.poetry.group.dev.dependencies]
 mkdocs = "^1.6.1"
 mkdocs-material = "^9.5.44"
 mkdocstrings = "^0.27.0"
 mkdocs-pdf = "^0.1.2"
+mkdocs-jupyter = "^0.25.1"
 
 [build-system]
 requires = ["poetry-core"]

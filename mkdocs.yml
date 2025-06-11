@@ -113,7 +113,6 @@ extra:
         make our documentation better.
       actions:
         - accept
-        - reject
         - manage
   analytics:
     provider: google
