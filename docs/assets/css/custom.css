@@ -1,0 +1,21 @@
+/* docs/assets/css/custom.css */
+
+.swiper-slide {
+  /* Use flexbox to center the image inside the slide */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  /* Prevent images from being taller than 75% of the viewport height */
+  max-height: 75vh;
+
+  /* Let the browser determine the width and height automatically */
+  /* while respecting the max-height and the image's aspect ratio. */
+  width: auto;
+  height: auto;
+  
+  /* Ensure the image scales nicely within the box */
+  object-fit: contain;
+}

@@ -7,17 +7,23 @@ nav:
     # - The Workshop: Home/workshop.md
     - License: Home/LICENSE.md
     - About us: Home/about.md
-  - Introduction: Introduction/Introduction.md
-  - Augmentation: Augmentation/augmentation.md
-  - Ethics:
-    - Ethics/index.md
-    - Case Studies: Ethics/ethics.md
-  - Small Language Models: SML/sml.md
-  - What's Out There: What/what.md
-  - RAG: RAG/rag.md
-  - Wrap Up: Conclusion/conclusion.md
+  - Introduction: 1-introduction.md
+  - Hardware: 2-hardware.md
+  - Tokenization: 3-tokenization.md
+  - Embeddings: 4-embeddings.md
+  - Attention: 5-attention.md
+  - Sampling & training: 6-sampling.md
+  - Fine tuning: 7-finetuning.md
+  - Interacting: 8-interacting.md
+  - RAG: 9-rag.md
+  - Ethics: ethics.md
 extra_css:
   - css/custom.css
+  - https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css
+  - assets/css/custom.css
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js
+  - assets/js/custom.js
 theme:
   favicon: imgs/trace.svg
   name: material
@@ -81,6 +87,7 @@ plugins:
   - search
   - mkdocs-jupyter
   - mkdocs-pdf
+  - macros
 markdown_extensions:
   - abbr
   - admonition
