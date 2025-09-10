@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <!-- Add highlight.js for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <style>
+        :root {
+            --slide-width: 1280px;
+            --slide-height: 720px;
+            --base-font-size: 32px;
+        }
+
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: var(--slide-width);
+            height: var(--slide-height);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: var(--base-font-size);
+            line-height: 1.4;
+            background: white;
+            /* Prevent any text wrapping constraints */
+            max-width: none;
+            min-width: var(--slide-width);
+        }
+
+        .slide-content {
+            width: 100%;
+            height: 100%;
+            padding: 60px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            /* Ensure content uses full width */
+            max-width: none;
+            min-width: calc(var(--slide-width) - 120px); /* Account for padding */
+        }
+
+        /* Title slide styling */
+        .slide-content.title-slide {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .slide-content.title-slide h1 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+
+        /* Reset any potential wrapping constraints */
+        .slide-content > * {
+            width: 100%;
+            max-width: none;
+            min-width: 0;
+            box-sizing: border-box;
+        }
+
+        /* Typography with fixed sizes */
+        h1 { 
+            font-size: 1.5em;
+            margin: 0 0 0.5em 0;
+            line-height: 1.2;
+            width: 100%;
+            max-width: none;
+        }
+        
+        h2 { 
+            font-size: 1.3em;
+            margin: 0 0 0.5em 0;
+            line-height: 1.2;
+            width: 100%;
+            max-width: none;
+        }
+        
+        h3 { 
+            font-size: 1.1em;
+            margin: 0 0 0.5em 0;
+            line-height: 1.3;
+            width: 100%;
+            max-width: none;
+        }
+        
+        p { 
+            margin: 0 0 0.8em 0;
+            line-height: 1.4;
+            width: 100%;
+            max-width: none;
+            /* Prevent text wrapping */
+            white-space: normal;
+            word-wrap: normal;
+            overflow-wrap: normal;
+        }
+        
+        ul, ol {
+            width: 100%;
+            max-width: none;
+            margin: 0.5em 0 0.8em 0;
+            padding-left: 1.5em;
+            box-sizing: border-box;
+        }
+
+        li { 
+            margin-bottom: 0.4em;
+            line-height: 1.4;
+        }
+
+        /* Code block styling */
+        pre {
+            margin: 1em 0;
+            padding: 1em;
+            background: #f6f8fa;
+            border-radius: 4px;
+            font-size: 0.6em;  /* Smaller than regular text */
+            line-height: 1.45;
+            overflow-x: auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        code {
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+        }
+
+        /* Inline code */
+        p code, li code {
+            background: #f6f8fa;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-size: 0.85em;
+        }
+
+        /* Ensure code blocks use full width */
+        .slide-content pre, .slide-content pre code {
+            max-width: none;
+            width: 100%;
+        }
+    </style>
+    <script>
+        // Initialize syntax highlighting
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+
+        function scaleContent() {
+            const html = document.documentElement;
+            const body = document.body;
+            
+            // Calculate scale to fit viewport
+            const scaleX = (window.innerWidth - 40) / body.offsetWidth;
+            const scaleY = (window.innerHeight - 40) / body.offsetHeight;
+            const scale = Math.min(scaleX, scaleY, 1);
+            
+            // Apply scale to html element to scale everything uniformly
+            html.style.transform = `scale(${scale})`;
+            html.style.transformOrigin = 'center center';
+        }
+
+        window.addEventListener('load', scaleContent);
+        window.addEventListener('resize', scaleContent);
+    </script>
+</head>
+<body>
+    <div class="slide-content">
+        {{ content|safe }}
+    </div>
+</body>
+</html> 
