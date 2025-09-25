@@ -36,13 +36,16 @@
     <!-- <a href="https://acceleratescience.github.io/large-language-models/" style="font-size: 20px; text-decoration: none"><strong>Start »</strong></a>
     <br />
     <br /> -->
-    <a href="https://github.com/acceleratescience/large-language-models/tree/main/docs/notebooks">Check out the notebooks</a>
     ·
     <a href="https://github.com/acceleratescience/large-language-models/tree/main/slides">Check out the Slides</a>
+    ·
     <br />
+    ·
     <a href="https://github.com/acceleratescience/large-language-models/issues">Report Bug</a>
     ·
+    <br />
     <a href="https://github.com/acceleratescience/large-language-models/issues">Request Feature</a>
+    ·
     <br />
     <br />
     <a href="https://docs.science.ai.cam.ac.uk/large-language-models/"><strong>Head to the workshop materials »</strong></a>
@@ -85,16 +88,14 @@ This repository is Part I of a two-part course:
 ### Introduction to LLMs
 Part 1 consists of some slides and some notebooks that introduce LLMs, and how they can be used for scientific research.
 
-If you head to the website, you can find the slides that we used in the workshop. You can also find them in the [Slides](https://github.com/acceleratescience/large-language-models/tree/main/Slides) folder in this repository.
-
-There are also some [notebooks](https://github.com/acceleratescience/large-language-models/tree/main/notebooks) - we look at finetuning a BERT model for classication tasks, finetuning GPT-2 to make it sound like the President of the United States, and using RAG to produce a simple question-answering system with Streamlit
+If you head to the website, you can find the slides that we used in the workshop. You can also find them in the [Slides](https://github.com/acceleratescience/large-language-models/tree/main/slides) folder in this repository.
 
 ### Hands-on LLM workshop
 Part 2 is a much more comprehensive hands-on tutorial. It is designed as a reference source for our hands-on LLM workshop, but may be useful for others to get started with LLMs. To get started, follow the link and head to the website.
 
 <div align="center">
   <p align="center">
-    <a href="https://acceleratescience.github.io/hands-on-llms/"><strong>Hands On Course »</strong></a>
+    <a href="https://docs.science.ai.cam.ac.uk/hands-on-llms"><strong>Hands On Course »</strong></a>
 
   </p>
 </div>
