@@ -12,4 +12,4 @@ This workshop was originally delivered in-person at the University of Cambridge,
 
 In the main GitHub repository, there is a `notebooks` folder that contains the Jupyter notebooks that we used in the workshop. These notebooks are designed to be run on a local machine, and we recommend that you use a machine with a GPU to run them. If you don't have a GPU, you can use Google Colab to run the notebooks.
 
-[:fontawesome-solid-book:  Notebooks ](https://github.com/acceleratescience/large-language-models/tree/main/notebooks){ .md-button }
+[:fontawesome-solid-book:  Notebooks ](https://github.com/acceleratescience/large-language-models/tree/main/docs/notebooks){ .md-button }
