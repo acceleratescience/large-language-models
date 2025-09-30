@@ -16,6 +16,8 @@ nav:
   - Fine tuning: 7-finetuning.md
   - Interacting: 8-interacting.md
   - RAG: 9-rag.md
+  - Prompting: 10-prompting.md
+  - Practicalities: 11-practicalities.md
   - Ethics: ethics.md
 extra_css:
   - css/custom.css
@@ -85,7 +87,6 @@ theme:
 plugins:
   - mkdocstrings
   - search
-  - mkdocs-jupyter
   - mkdocs-pdf
   - macros
 markdown_extensions:
