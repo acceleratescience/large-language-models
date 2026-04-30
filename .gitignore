@@ -179,3 +179,5 @@ ignore/
 chroma.sqlite3
 
 notebooks/
+
+notes.md
