@@ -82,7 +82,7 @@
 
 # Overview
 This repository is Part I of a two-part course:
-1. An introduction to large language models for scientific research - how do they work, how can they be used, and how can they be trained?
+1. An introduction to large language models for scientific research - how do they work, how can they be used and how can they be trained?
 2. A hands-on tutorial on how to use large language models for scientific research.
 
 ### Introduction to LLMs
