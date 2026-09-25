@@ -16,7 +16,7 @@ nav:
   - Fine tuning: 7-finetuning.md
   - Interacting: 8-interacting.md
   - RAG: 9-rag.md
-  - Prompting: 10-prompting.md
+  # - Prompting: 10-prompting.md
   - Practicalities: 11-practicalities.md
   - Ethics: ethics.md
 extra_css:
